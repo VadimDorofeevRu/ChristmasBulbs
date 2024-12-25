@@ -112,8 +112,9 @@ export default class Bulbs {
 			this.bulbs.forEach(bulb => bulb.dispose());
 		}
 		this.bulbs = [];
-		let count = Math.floor(window.innerWidth / (this.options.interval + this.options.bulb_size));
-		let offset = (window.innerWidth - count * this.options.bulb_size - (count - 1) * this.options.interval) / 2;
+		let width = document.documentElement.clientWidth;
+		let count = Math.floor(width / (this.options.interval + this.options.bulb_size));
+		let offset = (width - count * this.options.bulb_size - (count - 1) * this.options.interval) / 2;
 
 		let prev_center = 0;
 		for (let i = 0; i < count; i++) {
