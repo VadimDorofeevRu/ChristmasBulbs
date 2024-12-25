@@ -9,13 +9,7 @@
 
     <script type="module">
         import Bulbs from './bulbs.js';
-        let bulbs = new Bulbs({ bulb_size: 30 });
-        setTimeout(() => {
-            bulbs.stop();
-            setTimeout(() => {
-                bulbs.dispose();
-            }, 2000);
-        }, 5000);
+        let bulbs = new Bulbs();
     </script>
 
 </body>
