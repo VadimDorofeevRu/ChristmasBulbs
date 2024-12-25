@@ -9,7 +9,7 @@ class Bulb {
 		this.options = options;
 
 		let container_width = Math.max(options.bulb_size, options.holder_size);
-		let container_height = options.holder / 2 + options.bulb_size;
+		let container_height = options.holder_size / 2 + options.bulb_size;
 
 		this.#svg = document.createElementNS(NS, 'svg');
 		this.#svg.style.position = 'fixed';
